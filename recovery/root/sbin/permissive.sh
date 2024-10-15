@@ -1,3 +1,4 @@
+'''sh
 #!/sbin/sh
 
 setenforce 0
