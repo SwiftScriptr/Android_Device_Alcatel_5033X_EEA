@@ -25,7 +25,7 @@ before_script:
   - TWRP_SOURCE1="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.aa" && TWRP_SOURCE2="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.ab" TWRP_SOURCE3="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.md5sum" TWRP_SOURCE4="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo.filelist.tzst"
   # Then uncomment below lines to download & extract the multi-part files
   - aria2c -x16 -s8 --console-log-level=error --summary-interval=0 "${TWRP_SOURCE1}" "${TWRP_SOURCE2}" "${TWRP_SOURCE3}" "${TWRP_SOURCE4}" || wget -q --show-progress --progress=bar:force "${TWRP_SOURCE1}" "${TWRP_SOURCE2}" "${TWRP_SOURCE3}" "${TWRP_SOURCE4}"
-  - tar --zstd -xf MinimalOmniRecovery-twrp-*.*-norepo*-2020*.tzst.a* --directory $HOME/twrp/
+  - tar --zstd -xf MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.aa MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.ab MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.md5sum inimalOmniRecovery-twrp-8.1-norepo.filelist.tzst  --directory $HOME/twrp/
   - rm MinimalOmniRecovery-twrp-*.*-norepo*-2020*.tzst.a*
 script:
   # Replace your ${_USERNAME_}, ${_REPO_SLUG_}, ${_VENDORNAME_}, ${_CODENAME_}
