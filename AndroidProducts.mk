@@ -3,5 +3,5 @@
 # Replace ${_VENDORNAME_} with your Brand/Vendor/Manufacturer's Value.
 # The part of last line in mine looks like "omni_Primo_RX5.mk"
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_${5033X_EEA}.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_5033X_EEA.mk
 ```
