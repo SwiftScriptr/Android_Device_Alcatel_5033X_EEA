@@ -22,11 +22,11 @@ before_script:
   # Download the TWRP Compressed Source Files from PhantomZone54's Release
   # > More on https://github.com/PhantomZone54/twrp_sources_norepo/releases/latest
   # If Building for Oreo-based Devices
-  - TWRP_SOURCE1="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.aa"
+  - TWRP_SOURCE1="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.aa" && TWRP_SOURCE2="https://github.com/PhantomZone54/twrp_sources_norepo/releases/download/v3.4.0-20201103/MinimalOmniRecovery-twrp-8.1-norepo-20201103.tzst.ab"
   # Then uncomment below lines to download & extract the multi-part files
-  - aria2c -x16 -s8 --console-log-level=error --summary-interval=0 "${TWRP_SOURCE1}" "${TWRP_SOURCE2}" "${TWRP_SOURCE3}" "${TWRP_SOURCE4}" || wget -q --show-progress --progress=bar:force "${TWRP_SOURCE1}"
-  - tar --zstd -xf MinimalOmniRecovery-twrp-*.*-norepo-2020*.tzst.aa --directory $HOME/twrp/ 
-  - rm MinimalOmniRecovery-twrp-*.*-norepo-2020*.tzst.aa
+  - aria2c -x16 -s8 --console-log-level=error --summary-interval=0 "${TWRP_SOURCE1}" "${TWRP_SOURCE2}" "${TWRP_SOURCE3}" "${TWRP_SOURCE4}" || wget -q --show-progress --progress=bar:force "${TWRP_SOURCE1}" "${TWRP_SOURCE2}"
+  - tar --zstd -xf MinimalOmniRecovery-twrp-*.*-norepo-2020*.tzst.a* --directory $HOME/twrp/
+  - rm MinimalOmniRecovery-twrp-*.*-norepo-2020*.tzst.a*
 script:
   # Replace your ${_USERNAME_}, ${_REPO_SLUG_}, ${_VENDORNAME_}, ${_CODENAME_}
   - cd $HOME/twrp/ && git clone https://github.com/swiftscriptr/Android_Device_Alcatel_5033X_EEA device/Alcatel/5033X_EEA
